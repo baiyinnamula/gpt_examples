@@ -21,4 +21,17 @@ def assist_journalist(facts: List[str], tone: str, length_words: int, style: str
     prompt = f'{prompt_role}\nFACTS: {facts}\nTONE: {tone}\nLENGTH: {length_words} words\nSTYLE: {style}'
     return ask_chatgpt([{"role": "user", "content": prompt}])
 
-print(assist_journalist(['The sky is blue', 'The grass is green'], 'informal', 100, 'blogpost'))
+# print(assist_journalist(['The sky is blue', 'The grass is green'], 'informal', 100, 'blogpost'))
+
+print(
+    assist_journalist(
+        facts=[
+            "A book on ChatGPT has been published last week",
+            "The title is Developing Apps with GPT-4 and ChatGPT",
+            "The publisher is O'Reilly.",
+        ],
+        tone="excited",
+        length_words=50,
+        style="news flash",
+    )
+)
