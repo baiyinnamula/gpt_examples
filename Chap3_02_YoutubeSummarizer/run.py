@@ -6,7 +6,7 @@ from openai import OpenAI
 client = OpenAI()
 
 # Read the transcript from the file
-with open("files/transcript.txt", "r") as f:
+with open("./files/transcript.txt", "r") as f:
     transcript = f.read()
 
 # Call the openai ChatCompletion endpoint, with the ChatGPT model
